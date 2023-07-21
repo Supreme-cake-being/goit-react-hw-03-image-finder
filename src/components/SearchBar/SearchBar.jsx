@@ -27,7 +27,7 @@ class SearchBar extends Component {
       <Header>
         <SearchForm onSubmit={this.handleSubmit}>
           <SearchFormButton type="submit">
-            <AiOutlineSearch width="32" height="32" />
+            <AiOutlineSearch />
             <SearchFormButtonLabel>Search</SearchFormButtonLabel>
           </SearchFormButton>
 
