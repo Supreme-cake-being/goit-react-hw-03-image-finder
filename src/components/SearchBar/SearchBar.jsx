@@ -12,7 +12,14 @@ import {
 class SearchBar extends Component {
   handleSubmit = e => {
     e.preventDefault();
-    this.props.onSubmit(e.target.query.value);
+
+    const query = e.target.query.value;
+
+    if (query.trim() !== '') {
+      this.props.onSubmit(e.target.query.value);
+    }
+
+    e.target.reset();
   };
 
   render() {
