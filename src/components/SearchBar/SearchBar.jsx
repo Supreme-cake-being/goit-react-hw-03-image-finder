@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 import {
@@ -10,6 +11,8 @@ import {
 } from './SearchBar.styled';
 
 class SearchBar extends Component {
+  static propTypes = { onSubmit: PropTypes.func.isRequired };
+
   handleSubmit = e => {
     e.preventDefault();
 

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import {
   ImageGalleryItemBox,
   ImageGalleryItemImage,
@@ -7,6 +9,12 @@ import Modal from '../Modal/Modal';
 
 class ImageGalleryItem extends Component {
   state = { isModalOpen: false };
+
+  static propTypes = {
+    image: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
+    largeImage: PropTypes.string.isRequired,
+  };
 
   toggleModal = () => {
     this.setState({ isModalOpen: !this.state.isModalOpen });

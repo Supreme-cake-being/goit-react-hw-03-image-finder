@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { ImageGalleryList, Error } from './ImageGallery.styled';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
@@ -14,6 +15,8 @@ class ImageGallery extends Component {
     isLoading: false,
     error: '',
   };
+
+  static propTypes = { searchQuery: PropTypes.string.isRequired };
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.page !== this.state.page) {
