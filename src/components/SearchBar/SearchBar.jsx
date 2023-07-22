@@ -19,7 +19,7 @@ class SearchBar extends Component {
     const query = e.target.query.value;
 
     if (query.trim() !== '') {
-      this.props.onSubmit(e.target.query.value);
+      return this.props.onSubmit(e.target.query.value);
     }
 
     e.target.reset();
